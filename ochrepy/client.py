@@ -1,6 +1,6 @@
 """ A simple and thin Python library for the Ochre Web API """
 
-__all__ = ["OchreAPI", "OchreException"]
+__all__ = ["Ochre", "OchreException"]
 
 
 import logging
@@ -112,7 +112,6 @@ class OchreAPIClient:
             return {}
         try: 
             token = self.auth_manager.get_access_token(as_dict=False)
-            print(f"token: {token}")
         except TypeError:
             token = self.auth_manager.get_access_token()
         return {"Authorization": f"Bearer {token}"}

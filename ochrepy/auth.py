@@ -81,7 +81,7 @@ class OchreAuthBase:
     @staticmethod
     def _get_user_inut(prompt):
         try:
-            return raw_input(prompt)
+            return raw_input(prompt) # type: ignore
         except NameError:
             return input(prompt)
         
@@ -187,7 +187,6 @@ class OchreClientCredentials(OchreAuthBase):
                 proxies=self.proxies,
                 timeout=self.requests_timeout,
             )
-            print(f"response: {response.json()}")
             response.raise_for_status()
             token_info = response.json()
             return token_info
