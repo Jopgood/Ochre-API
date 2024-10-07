@@ -41,6 +41,14 @@ To use this package, you will need a client ID and a client secret, which you ca
 
 ### Example with client authentication
 
+#### .env
+```
+OCHRE_CLIENT_ID=
+OCHRE_CLIENT_SECRET=
+OCHRE_CLIENT_USERNAME=
+```
+
+#### code
 ```python
 import ochrepy
 from ochrepy.auth import OchreClientCredentials

@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open("README.md") as f:
     long_description = f.read()
@@ -13,7 +13,7 @@ extra_reqs = {
 
 setup(
     name='ochrepy',
-    version='1.0.0',
+    version='1.0.1',
     description='A light weight Python library for the Ochre Web API',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -29,4 +29,4 @@ setup(
     ],
     extras_require=extra_reqs,
     license='MIT',
-    packages=['ochrepy'])
+    packages=find_packages(),)
